@@ -1,1 +1,221 @@
-Hi this is Talish, Welcome to my website
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talish Jain - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'subtle-bob': 'subtleBob 3s ease-in-out infinite'
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        subtleBob: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200 font-sans antialiased">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass-effect">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white tracking-wider">TJ</a>
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#home" class="text-gray-300 hover:text-white transition duration-300">Home</a>
+                <a href="#about" class="text-gray-300 hover:text-white transition duration-300">About</a>
+                <a href="#projects" class="text-gray-300 hover:text-white transition duration-300">Projects</a>
+                <a href="#contact" class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300">Contact</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-gray-300 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-4 6h10"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#home" class="block py-2 text-gray-300 hover:text-white">Home</a>
+            <a href="#about" class="block py-2 text-gray-300 hover:text-white">About</a>
+            <a href="#projects" class="block py-2 text-gray-300 hover:text-white">Projects</a>
+            <a href="#contact" class="block mt-2 bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg text-center">Contact</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex items-center bg-cover bg-center" style="background-image: linear-gradient(rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 1)), url('https://placehold.co/1920x1080/000000/FFFFFF?text=Abstract+Background');">
+            <div class="container mx-auto px-6 text-center">
+                <div class="animate-fade-in-up">
+                    <img src="https://placehold.co/150x150/6366F1/FFFFFF?text=TJ" alt="Talish Jain" class="w-40 h-40 rounded-full mx-auto mb-6 border-4 border-indigo-500 shadow-lg">
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-4">Talish Jain</h1>
+                    <p class="text-lg md:text-2xl text-indigo-300 font-medium">
+                        First Year Student at <span class="font-bold">BMS Institute of Technology and Management</span>
+                    </p>
+                    <p class="max-w-2xl mx-auto mt-4 text-gray-400">
+                        Aspiring developer and tech enthusiast, passionate about building cool things for the web.
+                    </p>
+                    <a href="#projects" class="mt-8 inline-block bg-white text-gray-900 font-bold py-3 px-8 rounded-lg text-lg hover:bg-gray-200 transition-transform transform hover:scale-105 duration-300">
+                        View My Work
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-20 md:py-32 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">About Me</h2>
+                    <div class="w-20 h-1 bg-indigo-500 mx-auto mt-4"></div>
+                </div>
+                <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+                    <div class="md:w-1/2 animate-subtle-bob">
+                        <div class="relative w-full max-w-sm mx-auto">
+                            <div class="absolute inset-0 bg-indigo-500 rounded-lg transform -rotate-6"></div>
+                            <img src="https://placehold.co/400x400/1F2937/FFFFFF?text=Code" alt="About Me Image" class="relative w-full h-auto rounded-lg shadow-2xl">
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 text-center md:text-left">
+                        <p class="text-lg text-gray-400 mb-4 leading-relaxed">
+                            Hello! I'm Talish, a first-year student currently pursuing my degree at BMSIT. I'm deeply fascinated by the world of technology, from software development to the latest innovations in AI.
+                        </p>
+                        <p class="text-lg text-gray-400 mb-6 leading-relaxed">
+                            I'm at the beginning of my journey, eager to learn new programming languages, frameworks, and tools. My goal is to collaborate on exciting projects and contribute to building impactful solutions. When I'm not coding, I enjoy exploring new music and playing video games.
+                        </p>
+                        <div class="flex justify-center md:justify-start flex-wrap gap-3">
+                            <span class="bg-gray-800 text-indigo-300 text-sm font-medium px-4 py-2 rounded-full">Web Development</span>
+                            <span class="bg-gray-800 text-indigo-300 text-sm font-medium px-4 py-2 rounded-full">Problem Solving</span>
+                            <span class="bg-gray-800 text-indigo-300 text-sm font-medium px-4 py-2 rounded-full">Teamwork</span>
+                            <span class="bg-gray-800 text-indigo-300 text-sm font-medium px-4 py-2 rounded-full">Learning</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 md:py-32 bg-gray-800">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">My Projects</h2>
+                    <p class="text-gray-400 mt-2">A glimpse into my coding journey. More coming soon!</p>
+                    <div class="w-20 h-1 bg-indigo-500 mx-auto mt-4"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project Card 1 -->
+                    <div class="glass-effect rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://placehold.co/600x400/374151/FFFFFF?text=Project+1" alt="Project 1" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Portfolio Website</h3>
+                            <p class="text-gray-400 mb-4">The very website you're looking at! Built with HTML and Tailwind CSS to kickstart my web development journey.</p>
+                            <a href="#" class="text-indigo-400 hover:text-indigo-300 font-semibold">View Source &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Project Card 2 (Placeholder) -->
+                    <div class="glass-effect rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://placehold.co/600x400/374151/FFFFFF?text=Project+2" alt="Project 2" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Coming Soon</h3>
+                            <p class="text-gray-400 mb-4">I'm currently working on something exciting. Check back later to see my next project!</p>
+                            <span class="text-gray-500 font-semibold">Stay Tuned</span>
+                        </div>
+                    </div>
+                    <!-- Project Card 3 (Placeholder) -->
+                    <div class="glass-effect rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <img src="https://placehold.co/600x400/374151/FFFFFF?text=Project+3" alt="Project 3" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Future Idea</h3>
+                            <p class="text-gray-400 mb-4">Have an idea for a project? I'm always open to collaboration and learning new things.</p>
+                            <a href="#contact" class="text-indigo-400 hover:text-indigo-300 font-semibold">Let's Talk &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 md:py-32 bg-gray-900">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Get In Touch</h2>
+                <div class="w-20 h-1 bg-indigo-500 mx-auto mt-4"></div>
+                <p class="text-gray-400 mt-4 max-w-xl mx-auto">
+                    I'm always excited to connect with new people. Whether you have a question, a project idea, or just want to say hi, feel free to reach out!
+                </p>
+                <a href="mailto:your.email@example.com" class="mt-8 inline-block bg-indigo-600 text-white font-bold py-4 px-8 rounded-lg text-lg hover:bg-indigo-700 transition-transform transform hover:scale-105 duration-300">
+                    Say Hello
+                </a>
+                <div class="mt-12 flex justify-center space-x-6">
+                    <!-- Replace # with your actual social links -->
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 border-t border-gray-700">
+        <div class="container mx-auto px-6 py-6 text-center text-gray-400">
+            <p>&copy; <span id="current-year"></span> Talish Jain. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
